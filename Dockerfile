@@ -32,7 +32,7 @@ RUN /usr/lib/postgresql/9.3/bin/initdb
 # Expose the PostgreSQL port
 EXPOSE 5432
 
-VOLUME ["/var/lib/postgresql/9.3/main/"]
+VOLUME ["/var/lib/postgresql/9.3/main/", "/var/run/postgresql"]
 
 # Set the default command to run when starting the container
 ENTRYPOINT ["/usr/lib/postgresql/9.3/bin/postgres"]
